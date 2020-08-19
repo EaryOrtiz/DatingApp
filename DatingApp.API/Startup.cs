@@ -56,6 +56,7 @@ namespace DatingApp.API
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseAuthentication();
 
             if (!env.IsDevelopment())
             {
@@ -82,7 +83,7 @@ namespace DatingApp.API
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
