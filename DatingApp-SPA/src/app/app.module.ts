@@ -17,6 +17,7 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { from } from 'rxjs';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberDetailedComponent } from './members/member-detailed/member-detailed.component';
 import { ListsComponent } from './lists/lists.component';
 import { MesaggesComponent } from './mesagges/mesagges.component';
@@ -24,7 +25,9 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
+import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guards';
 
 
 @NgModule({
@@ -35,6 +38,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
       HomeComponent,
       RegisterComponent,
       MemberListComponent,
+      MemberEditComponent,
       MemberCardComponent,
       MemberDetailedComponent,
       ListsComponent,
@@ -62,7 +66,9 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
   providers: [
     ErrorInterceptorProvider,
     MemberDetailResolver,
-    MemberListResolver
+    MemberListResolver,
+    MemberEditResolver,
+    PreventUnsavedChanges,
   ],
   bootstrap: [AppComponent]
 })
