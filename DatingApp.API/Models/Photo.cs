@@ -14,6 +14,7 @@
 
         public bool IsMain { get; set; }
 
+        public string PublicID { get; set; }
 
         //Foreign
         public User user { get; set; }

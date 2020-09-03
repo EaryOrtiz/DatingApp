@@ -6,6 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { JwtModule } from '@auth0/angular-jwt';
+import { FileUploadModule } from 'ng2-file-upload';
+
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 
 import { AppComponent } from './app.component';
@@ -26,8 +29,9 @@ import { appRoutes } from './routes';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
-import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guards';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+
 
 
 @NgModule({
@@ -42,7 +46,8 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guards'
       MemberCardComponent,
       MemberDetailedComponent,
       ListsComponent,
-      MesaggesComponent
+      MesaggesComponent,
+      PhotoEditorComponent,
    ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guards'
     FormsModule,
     BrowserAnimationsModule,
     NgxGalleryModule,
+    FileUploadModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
