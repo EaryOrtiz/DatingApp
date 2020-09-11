@@ -9,8 +9,10 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { JwtModule } from '@auth0/angular-jwt';
 import { FileUploadModule } from 'ng2-file-upload';
 import { TimeagoModule } from 'ngx-timeago';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 
 
@@ -62,6 +64,8 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
     NgxGalleryModule,
     FileUploadModule,
     TimeagoModule.forRoot(),
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
     TabsModule.forRoot(),
