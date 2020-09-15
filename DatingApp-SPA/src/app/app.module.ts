@@ -34,6 +34,7 @@ import { appRoutes } from './routes';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
+import { ListsResolver } from './_resolvers/list.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guards';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 
@@ -86,6 +87,7 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
     MemberListResolver,
     MemberEditResolver,
     PreventUnsavedChanges,
+    ListsResolver,
   ],
   bootstrap: [AppComponent]
 })
